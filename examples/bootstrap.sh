@@ -14,7 +14,7 @@ if [ ! -d "$(pwd)/examples/$@" ]; then
 fi
 
 read -p "Are you sure you want to delete the '$@' Elasticsearch index? [y/N] " -n 1 -r
-echo 
+echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
   exit 1
@@ -30,6 +30,6 @@ if [ -f "examples/$@/data.py" ]; then
   python examples/$@/data.py --config "$(pwd)/examples/$@/schema.json"
 fi
 
-bootstrap --config "$(pwd)/examples/$@/schema.json"
+python pgsync/bin/bootstrap --config "$(pwd)/examples/$@/schema.json"
 
-pgsync --config "$(pwd)/examples/$@/schema.json"
+python pgsync/bin/pgsync --config "$(pwd)/examples/$@/schema.json"

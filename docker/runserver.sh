@@ -6,5 +6,5 @@
 python examples/airbnb/schema.py --config examples/airbnb/schema.json
 python examples/airbnb/data.py --config examples/airbnb/schema.json
 
-bootstrap --config examples/airbnb/schema.json
-pgsync --config examples/airbnb/schema.json --daemon
+python bin/bootstrap --config examples/airbnb/schema.json
+python bin/pgsync --config examples/airbnb/schema.json --daemon

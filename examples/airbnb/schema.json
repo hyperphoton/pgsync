@@ -1,6 +1,6 @@
 [
     {
-        "database": "airbnb",
+        "database": "air-bnb",
         "index": "reservations",
         "nodes": {
             "table": "users",
@@ -59,7 +59,7 @@
                                         }
                                     ]
                                 },
-                                {  
+                                {
                                     "table": "hosts",
                                     "schema": "public",
                                     "columns": [
